@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--head section with style sheets and files for mobile menu--> 	
+	<head>
+<!-- Name: Iryna Shostsik
+ 	  Current Date: 04/26/2017 
+	  Class.section: CGS1821.001
+	  Assignment: Final Project
+	  Language: HTML5
+	  Purpose: HTML code for a fictual Interior Design Company "Good Interior Design Firm"
+	  Includes: scheduling.css, littlechair.png, apt_schedule.png, 
+	            apartment.jpg, modernoffice.jpg, housemodern.jpg, normalize.css
+ -->			
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Interior Design Firm: Scheduling</title>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/scheduling.css">
+	<link rel="stylesheet" href="styles/slicknav.css">
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+		});
+	</script>
+	</head>
+	
+	<body>
+		<header>
+			
+<!--little chair logo uses an image map to navigate to home page from other pages-->	
+	
+			<div><img src="images/littlechair.png" alt="Little Chair Logo" width="87" height="78" usemap="#chair"></div>
+			<map name="chair">
+            <area href="index.html" alt="Home Page" title="Home Page" shape="circle" coords="43,39,69">
+        </map>
+			<h2>Good Interior Design</h2>
+		</header>
+		
+<!--the navigation menu of the page-->		
+		<nav id="mobile_menu"> </nav>
+		<nav id="nav_menu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="scheduling.html" class="current">Scheduling</a></li>
+			<li><a href="contacts.html">Contacts</a></li>
+		</ul>
+		</nav>	
+		<main>
+<!-- the image is clicked for the link to work -->			
+			<a href="tel:456-098-098">
+				<img src="images/apt_schedule.png" alt="Schedule an appointment">
+			</a>
+			<figure>
+		<img id="img1" src="images/apartment.jpg" alt="Modern Apartment" width="400">
+		<figcaption>Apartment Design</figcaption>
+		</figure>
+		 
+		 <figure>
+		<img id="img2" src="images/modernoffice.jpg" alt="Modern Office" width="390">
+		<figcaption>Office Design</figcaption></figure>		
+		
+		<figure>
+		<img id="img3" src="images/housemodern.jpg" alt="Modern House" width="350">
+		<figcaption>House Design</figcaption>
+		</figure>
+		<figure>
+			<h2>Stop wasting your time, talk to us today!</h2>
+			<p>&nbsp;&nbsp;&nbsp;Our area of expertise encompasses a wide range of interior design and turn-key projects. 
+		   We have successfully completed several types of interior design projects from commercial,
+		   residential and institutional projects, to exhibition and furniture design, to landscaping.
+		   Each and every time, we have provided spectacular results to owners and stakeholders alike.
+		   We’re always committed to handing over every project we work on as per the agreed timelines
+		   and we endeavor to deliver it even earlier whenever possible. Hence, we become your partner in
+		   fulfilling your project and not merely your supplier.
+        </p></figure>
+		
+		</main>
+
+<!-- the footer of the page -->		
+		<footer>
+		<p>&copy; 2017 Good Interior Design | Contact us at intdesign@gmail.com
+	    </p>
+	</footer>
+	</body>
+</html>

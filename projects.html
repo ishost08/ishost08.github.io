@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--head section with style sheets and files for mobile menu--> 	
+	<head>
+<!-- Name: Iryna Shostsik
+ 	  Current Date: 04/26/2017 
+	  Class.section: CGS1821.001
+	  Assignment: Final Project
+	  Language: HTML5
+	  Purpose: HTML code for a fictual Interior Design Company "Good Interior Design Firm"
+	  Includes: contacts.css, aboutus.jpg, normalize.css
+ -->	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Interior Design Firm: About Us</title>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/contacts.css">
+	<link rel="stylesheet" href="styles/slicknav.css">
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script type="text/javascript"> $(document).ready(function()
+               { $('#accordion').accordion({ active: false, collapsible: true }); });
+  </script>
+	<script src="js/jquery.slicknav.min.js"></script>
+  <script type="text/javascript">
+		$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+		});
+	</script>
+	
+	</head>
+	
+	<body>
+		<header>
+			
+<!--little chair logo uses an image map to navigate to home page from other pages-->
+
+			<div><img src="images/littlechair.png" alt="Little Chair Logo" width="87" height="78" usemap="#chair"></div>
+			<map name="chair">
+            <area href="index.html" alt="Home Page" title="Home Page" shape="circle" coords="43,39,69">
+        </map>
+			<h2>Good Interior Design</h2>
+		</header>
+		
+<!--the navigation menu of the page-->	
+		<nav id="mobile_menu"> </nav>
+		<nav id="nav_menu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="projects.html" class="current">Projects</a></li>
+			<li><a href="scheduling.html">Scheduling</a></li>
+			<li><a href="contacts.html">Contacts</a></li>
+		</ul>
+		</nav>	
+							
+		<main>	
+			<br><h3 style="text-align: center;">We present to you our recent projects.<br>
+			    Here are included three of our living rooms designs, one library and one kitchen design.
+		    </h3>
+				 
+			 <br><div id="accordion">
+  	 	<h3 class="accordion-title">Living Room</h3>
+  	 	<div class="accordion-content">
+  	 		<p><b>Three of our recent Living Room Designs</b></p><br>
+  	 		<!-- carousel -->		
+
+<div>
+  <img class="mySlides" src="images/liv1.jpg" alt="living room 1" style="width:100%;">
+  <img class="mySlides" src="images/liv2.jpg" alt="living room 2" style="width:100%;">
+  <img class="mySlides" src="images/liv3.jpg" alt="living room 3" style="width:100%;">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+  	 		
+  	    </div>
+  	 	
+  	 	<h3 class="accordion-title">Library</h3>
+  	 	<div class="accordion-content">
+  	 		<p><b>Modernistic Home Library</b><p>
+  	 		<img src="images/lib1.jpg" alt="Project 2" width="100" style="padding-top: 15px;">
+  	 	</div>
+  	 	
+  	 	<h3 class="accordion-title">Kitchen</h3>
+  	 	<div class="accordion-content">
+  	 		<p><b>Beautiful kitchen with a welcoming atmosphere</b></p>
+  	 		<img src="images/proj3.jpg" alt="Project 3" width="100" style="padding-top: 15px;">
+  	 	</div>
+  	 	
+  	 </div><br><br>
+  	 
+  	 
+  	 <script> $("#accordion").accordion({
+              header: "h3",
+              collapsible: true,
+              autoHeight: false,
+              navigation: true 
+              });
+	 </script>
+
+
+		</main>	
+
+
+<!-- the footer of the page -->		
+		<footer>
+		<p>&copy; 2017 Good Interior Design | Contact us at intdesign@gmail.com
+	    </p>
+	</footer>
+	</body>
+</html>
+

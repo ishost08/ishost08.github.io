@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--head section with style sheets and files for mobile menu--> 	
+	<head>
+<!-- Name: Iryna Shostsik
+ 	  Current Date: 04/26/2017 
+	  Class.section: CGS1821.001
+	  Assignment: Final Project
+	  Language: HTML5
+	  Purpose: HTML code for a fictual Interior Design Company "Good Interior Design Firm"
+	  Includes: contacts.css, aboutus.jpg, normalize.css
+ -->	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Interior Design Firm: About Us</title>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/contacts.css">
+	<link rel="stylesheet" href="styles/slicknav.css">
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="slider.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+		});
+	</script>
+	</head>
+	
+	<body>
+		<header>
+			
+<!--little chair logo uses an image map to navigate to home page from other pages-->
+
+			<div><img src="images/littlechair.png" alt="Little Chair Logo" width="87" height="78" usemap="#chair"></div>
+			<map name="chair">
+            <area href="index.html" alt="Home Page" title="Home Page" shape="circle" coords="43,39,69">
+        </map>
+			<h2>Good Interior Design</h2>
+		</header>
+		
+<!--the navigation menu of the page-->	
+		<nav id="mobile_menu"> </nav>
+		<nav id="nav_menu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="scheduling.html">Scheduling</a></li>
+			<li><a href="contacts.html" class="current">Contacts</a></li>
+		</ul>
+		</nav>	
+					
+		<main>		
+			<img src="aboutus.jpg" alt="About our Decor"/>
+			<p>Interior design is all about how we experience spaces. It’s a powerful,
+			   essential part of our daily lives and affects how we live, work, play, and even heal.
+			   Comfortable homes, functional workplaces, beautiful public spaces—that’s interior design at work.
+               The best interior designers make it look easy, crafting spaces that anticipate our needs and appeal
+               to our emotions, but in reality a broad set of skills and technical knowledge is required. Interior
+               design has changed dramatically since the early 20th century when it was just beginning to emerge as
+               a profession.<br>
+               Interior designers must be highly skilled in order to create interior environments that are functional,
+               safe, and adhere to building codes, regulations and ADA requirements. We go beyond the selection of color
+               palettes and furnishings and apply our knowledge to the development of construction documents, occupancy
+               loads, healthcare regulations and sustainable design principles.</p>
+               
+               <form name="freeQuote_form" method="post" action="scheduling.html" >
+               	
+               	<h2>Get a free quote by filling out this form</h2>
+               	
+               	<fieldset>
+			    	<legend>Contact Information</legend>
+               	<label for="Fname">First Name </label>
+			    <input type="text" name="Fname" id="Fname"
+			           onchange="checkFname()"
+			           placeholder="Enter your First Name" required><br>
+			    
+			    <label for="Lname">Last Name </label>
+			    <input type="text" name="Lname" id="Lname"
+			           onchange="checkLname()"
+			           placeholder="Enter your Last Name" required><br>
+			    
+			    <label for="tel">Phone Number </label>
+			    <input type="tel" name="PhoneNumber" id="tel"
+				       placeholder="999-999-9999"
+				       onchange="checkPhoneNum()"
+				       title="Must be 999-999-9999 format" required><br>
+				       
+				<label for="zip">Zip Code </label>
+			    <input type="text" name="Zipcode" id="zip"
+			           placeholder="5 or 9 digits"
+			           onchange="checkZipcode()"
+			           title="Either 5 or 9 digits" required><br>
+			           
+			    <label for="email">E-mail </label>
+			    <input type="email" name="emailaddress" id="email"
+			           onchange="checkEmail()" 
+			           placeholder="example@domain.com" required><br>
+			    
+			    <label for="budget">Approxomate Budget </label>
+			    <select name="Approx_budget" id="budget">
+			    	<option value="lessthan500">Less than $500</option>
+			    	<option value="1000-2500">$1,000-$2,500</option>
+			    	<option value="2500-5000">$2,500-$5,000</option>
+			    	<option value="5000-10000">$5,000-$10,000</option>
+			    	<option value="morethan10000">$10,000+</option>
+			    	<option value="other">Other</option>
+			    </select><br><br>
+			    </fieldset>
+			    
+			    <fieldset>
+			    	<legend>Services Needed</legend>
+			    	
+			    <label for="service1"> Architecture and Landscaping</label>
+			    <input type="checkbox" name="architecture" id="service1" value="Architecture and Landscaping"><br>
+			    
+			    <label for="service2"> Design Concept Development</label>
+			    <input type="checkbox" name="design" id="service2" value="Design Development"><br>
+			    
+			    <label for="service3"> Project Evaluation and Analysis</label>
+			    <input type="checkbox" name="evalutation" id="service3" value="Project Evaluation"><br>
+			    
+			    <label for="service4"> Post-evaluation of Project Results</label>
+			    <input type="checkbox" name="post-evaluation" id="service4" value="Post-evaluation"><br>
+			    
+			    <label for="service5"> Other</label>
+			    <input type="checkbox" name="other" id="service5" value="Other"><br>
+			    
+			    </fieldset>
+			    
+			    <fieldset>
+			    	<legend>Wish to be contacted by </legend>
+			    	
+			    	<label for="telNum">Telephone Number</label>
+			    	<input type="radio" name="contact" id="telNum" value="Phone number"><br>
+			    	
+			    	<label for="E-mail">Email Address</label>
+			    	<input type="radio" name="contact" id="E-mail" value="Email"><br>
+			    	
+			    	<label for="either">Either by Telephone or Email</label>
+			    	<input type="radio" name="contact" id="either" value="Either"><br>
+			    	 	
+			    </fieldset>
+			    
+			    
+			    <label for="details" id="concerns">Share any additional details or concerns </label><br>
+			    <textarea name="details"
+			              placeholder=" Type your message here."
+			              id="details"></textarea><br>
+			    
+			    <button type="submit" name="submit" value="Submit Request">Submit Request</button>
+		        <button type="reset" name="reset" value="Reset fields">Reset fields</button>
+			
+               </form>
+               
+               <p id="privacy">We are committed to protecting your privacy.
+            We will only use the information that we collect about you lawfully.<br>
+            If you have any questions/comments about privacy, you should
+            <a href="mailto:interiordesign.com?cc=interiordesign.com&subject=Questions&nbsp;">contact us</a>.</p>
+            
+               
+		</main>
+		
+<script>
+      function checkFname()
+{
+    var x = document.forms["freeQuote_form"]["Fname"].value;
+    var regex = /^[a-zA-Z]$/;
+    if (!x.match(regex))
+    {
+        alert("The input must be letters");
+        document.forms["freeQuote_form"]["Fname"].focus();
+        return false;
+    }
+}
+</script>	
+
+<script>
+      function checkLname()
+{
+    var x = document.forms["freeQuote_form"]["Lname"].value;
+    var regex = /^[a-zA-Z]$/;
+    if (!x.match(regex))
+    {
+        alert("The input must be letters");
+        document.forms["freeQuote_form"]["Lname"].focus();
+        return false;
+    }
+}
+</script>	
+<script>
+      function checkPhoneNum()
+{
+    var x = document.forms["freeQuote_form"]["PhoneNumber"].value;
+    var regex = /^[2-9]\d{2}-\d{3}-\d{4}$/;
+    if (!x.match(regex))
+    {
+        alert("Please match phone number with correct format 999-999-999");
+        document.forms["freeQuote_form"]["PhoneNumber"].focus();
+        return false;
+    }
+}
+</script>
+<script>
+      function checkZipcode()
+{
+    var x = document.forms["freeQuote_form"]["Zipcode"].value;
+    var regex = /^\d{5}(?:[-]\d{4})?$/;
+    if (!x.match(regex))
+    {
+        alert("Enter 5 or 9 digit zip code. Example: 00000-0000");
+        document.forms["freeQuote_form"]["Zipcode"].focus();
+        return false;
+    }
+}
+</script>	
+<script>
+      function checkEmail()
+{
+    var x = document.forms["freeQuote_form"]["emailaddress"].value;
+    var regex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    if (!x.match(regex))
+    {
+        alert("Please match email with correct format example@domain.com");
+        document.forms["freeQuote_form"]["emailaddress"].focus();
+        return false;
+    }
+}
+</script>	
+ 
+<h2 id="animation">Would you give our website a rating of 1 through 10?</h2>
+<label for="Rating" style="padding-left: 130px; font-size: 120%;">Rating: </label>
+		<input type="text" id="Rating">
+	<div id="rate"> </div><br>
+	
+<input type="button" name="RateButton" id="RateButton" value="Submit Rating"
+       onClick="alert('Thank you for rating us!');">	
+
+
+
+<!-- the footer of the page -->		
+		<footer>
+		<p>&copy; 2017 Good Interior Design | Contact us at intdesign@gmail.com
+	    </p>
+	</footer>
+	</body>
+</html>
+

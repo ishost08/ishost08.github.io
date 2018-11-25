@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--head section with style sheets and files for mobile menu--> 	
+	<head>
+<!-- Name: Iryna Shostsik
+ 	  Current Date: 04/26/2017 
+	  Class.section: CGS1821.001
+	  Assignment: Final Project
+	  Language: HTML5
+	  Purpose: Create a mobile version of "Good Interior Design Firm" using jQuery mobile
+	  Includes: main.css, littlechair.png, livingroom.jpeg, drafts.jpg, 
+	            minimalisticwall.jpg, think.jpg, designers.jpg, normalize.css
+ -->			
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Interior Design Firm: Home Page</title>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/slicknav.css">
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+		});
+	</script>
+	
+	</head>
+	
+	<body>
+		<header>
+				
+<!--little chair logo uses an image map to navigate to home page from other pages-->
+
+			<div><img src="images/littlechair.png" alt="Little Chair Logo" width="87" height="78" usemap="#chair"></div>
+			<map name="chair">
+            <area href="index.html" alt="Home Page" title="Home Page" shape="circle" coords="43,39,69">
+        </map>        
+			<h2>Good Interior Design</h2>
+		</header>
+		
+<!-- navigation menu that links to 2 more pages, the other links go to the home page-->		
+		<nav id="mobile_menu"> </nav>
+		<nav id="nav_menu">
+		<ul>
+			<li><a href="index.html" class="current">Home</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="scheduling.html">Scheduling</a></li>
+			<li><a href="contacts.html">Contacts</a></li>
+		</ul>
+		</nav>	
+		
+		<main>
+<!--the main section has a two-column layout-->		
+
+<script type="text/javascript">
+<!--
+if (screen.width <= 767) {
+document.location = "http://home.ite.sfcollege.edu/~iryna.shostsik/cgs1821/projects/project4/interior_mobile.html";
+}
+//-->
+</script>
+
+
+	
+		<section>
+			<img src="images/livingroom.jpeg" alt="Living Room Design" width="700">
+			<a href="scheduling.html">Make an appointment ></a><h2>Good design is unnoticed</h2>
+			<img id="img1" src="images/drafts.jpg" alt="Drafts" width="310"> 
+			<img id="img2" src="images/minimalisticwall.jpg" alt="Minimalistic Wall Design" width="385">
+			<img id="img3" src="images/think.jpg" alt="Design and Thinking">
+		</section>
+		<aside>
+			<h2>Interior Design</h2>
+			<p id="p1">The work of a professional can make all the difference. 
+			   Whether your home has 10 bedrooms, or your apartment is 800 square feet,
+			   it can be tricky to create a cohesive look that is representative of your style.
+			   The house’s interior must be aesthetically appealing and practical at the same time. 
+			   However, what is aesthetically appealing such as a beautiful blinds or great looking 
+			   modern boiler stoves depends greatly on whom you ask because everyone has different needs and lifestyle. 
+			   Our company provides clients a full service company that can help them with any project in the home:
+			   kitchen remodeling, bath remodeling, closet design, new construction planning, paint color selections,
+			   furniture placement and purchasing new furniture, staging, etc. We offer you great value for money with
+			   prices guaranteed to be among the best in the market compared to our competitors.
+			    <a href="aboutus.html">Learn more</a></p>
+			   <p id="p2">Three easy steps will get you all set to meet the home of your dreams:<br></p>
+			   	<ol>
+			   		<li>Learn about us and the services we offer.</li>
+			   		<li>Gather your ideas and wishes for us to design accordingly.</li>
+			   		<li>Contact us and make an appointment.</li>
+			   	</ol>
+
+			   <p id="p3">Send our team an
+			   <a href="mailto:interiordesign.com?cc=interiordesign.com&subject=Questions&nbsp;">Email</a></p> 
+			   <img src="images/designers.jpg" alt="Designers Group" width="470">
+			  
+		</aside>
+		
+	
+		<div><h3>For your convenience, here is some inspiration to awaken the brainstorm of your ideas.</h3>
+		<p>In this video you are presented with a beautiful collection of simple minimalistic interiors.<br>
+			This type of design might not be of your choice, but it will help to organize your thoughts.<br>
+			Many times "Less is more", which is a phrase adopted by architect Ludwig Mies van der Rohe
+		    as a precept for Minimalist design and architecture.<br>
+		</p>
+			<embed src="https://youtube.com/embed/x92QVb0m5j4" width="600" height="400">
+		</div>	
+		
+		</main>
+
+<!--the footer of the page-->		
+		<footer>
+		<p>&copy; 2017 Good Interior Design </p>
+	</footer>
+	</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">	
+	<head>
+<!-- Name: Iryna Shostsik
+ 	  Current Date: 04/26/2017 
+	  Class.section: CGS1821.001
+	  Assignment: Final Project
+	  Language: HTML5
+	  Purpose: Create a mobile version of Interior Design website using jQuery mobile
+ -->	
+  <meta charset="utf-8">
+  <title>Interior Design Firm Mobile</title>		
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/interior_mobile.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+															<!--Homepage-->
+															
+<div data-role="page" id="home">
+  <div data-role="header" style="text-align: center;">
+  <img src="images/littlechair.png" alt="Little Chair Logo" width="50" 
+       height="50" style="border-bottom: 5px solid #FFD700;">  
+  <h1 id="heading">Good Interior Design</h1>
+  </div>
+  
+  <!--Navigation Bar-->
+  <div data-role="navbar">
+  	<ul>
+  		<li><a href="#home" class="ui-btn-active"
+  			   data-icon="home">Home</a></li>		
+  		<li><a href="#projects" data-icon="star">Projects</a></li>
+  		<li><a href="#contacts" data-icon="grid">Contacts</a></li>
+  	</ul>
+  </div>
+  
+  <!--The main section-->
+  <section class="ui-content" role="main" style="text-align: center;">
+  	<h2 style="text-align: center;">Interior Design</h2>
+  	<img src="images/livingroom.jpeg" alt="Living Room Design" style="width=80%; max-width: 450px;">
+  	<h3 
+  	style="color:#008B8B; padding: 10px; border-top: 1px solid black; border-bottom: 1px solid black;"
+  	>Three easy steps will get you all set to meet the home of your dreams:<br></h3>
+			   	<ol>
+			   		<li style="text-align: left; font-size: 120%;">Learn about us and the services we offer.</li>
+			   		<li style="text-align: left; font-size: 120%;">Gather your ideas and wishes for us to design accordingly.</li>
+			   		<li style="text-align: left; font-size: 120%;">Contact us and make an appointment.</li>
+			   	</ol> 
+			   	 
+	 <!--Link that looks like a button-->		   		
+     <div class="ui-bar">
+     	<a href="tel:673-771-312" data-icon="arrow-r" data-theme="b">Make an Appointment</a><br>
+     	<h3>or<br><br>Send our team an
+     		 <a href="mailto:interiordesign.com?cc=interiordesign.com&subject=Questions&nbsp;">Email</a>
+     	</h3><br><br>
+     		<img src="images/designers.jpg" alt="Designers Group" style="width=80%; max-width: 500px;"><br>
+     </div>   	
+  </section>
+  
+  <!--Footer-->
+  <div data-role="footer" style="text-align: center;">
+  	<p>&copy; 2017 Good Interior Design </p>
+  </div>
+ </div>
+ 
+ 															<!--Projects Page-->
+ 															
+<div data-role="page" id="projects" style="text-align: center;">
+  <div data-role="header">
+  <img src="images/littlechair.png" alt="Little Chair Logo" width="50" 
+       height="50" style="border-bottom: 5px solid #FFD700;">  
+  <h1>Good Interior Design</h1>
+  </div>
+  
+  <!--Navigation Bar-->
+  <div data-role="navbar">
+  	<ul>
+  		<li><a href="#home" data-icon="home">Home</a></li>		
+  		<li><a href="#projects" data-icon="star" class="ui-btn-active">Projects</a></li>
+  		<li><a href="#contacts" data-icon="grid">Contacts</a></li>
+  	</ul>
+  </div>
+  
+  <!--The main section-->
+  <section class="ui-content" role="main">
+  	<h2 style="text-align: center;">Take a look at our Projects</h2><br>
+  	    <div data-role="collapsible" data-collapsed="false">
+  		  	<h2>Project #1</h2>
+  		  	<h3>Cozy Living Room Design</h3>
+  		  	<img src="images/proj1.jpg" alt="Project 1" id="img1">
+  		</div>
+  		 <div data-role="collapsible">
+  		  	<h2>Project #2</h2>
+  		  	<h3>Modernistic Home Library</h3>
+  		  	<img src="images/proj2.jpg" alt="Project 2" id="img2" >
+  		</div>
+  		 <div data-role="collapsible">
+  		  	<h2>Project #3</h2>
+  		  	<h3>Beautiful kitchen with a welcoming atmosphere</h3>
+  		  	<img src="images/proj3.jpg" alt="Project 3" id="img3">
+  		</div>
+  		
+  	</section>
+  
+  <!--Footer-->
+  <div data-role="footer">
+  	<p>&copy; 2017 Good Interior Design </p>
+  </div>
+  
+ </div>
+ 
+  																<!--Contacts Page-->
+  																
+<div data-role="page" id="contacts" style="text-align: center;">
+  <div data-role="header">
+  <img src="images/littlechair.png" alt="Little Chair Logo" width="50" 
+       height="50" style="border-bottom: 5px solid #FFD700;">  
+  <h1>Good Interior Design</h1>
+  </div>
+  
+  <!--Navigation Bar-->
+  <div data-role="navbar">
+  	<ul>
+  		<li><a href="#home" data-icon="home">Home</a></li>		
+  		<li><a href="#projects" data-icon="star">Projects</a></li>
+  		<li><a href="#contacts" data-icon="grid" class="ui-btn-active">Contacts</a></li>
+  	</ul>
+  </div>
+  
+  <!--The main section-->
+        <div data-role="main" class="ui-content">
+        	  <table data-role="table" data-mode="columntoggle" class="ui-responsive" id="myTable">
+        	  	 <tr>
+   					 <th class="thborder" 
+   					 style="border-bottom: 1px solid #d6d6d6; border-top: 1px solid #d6d6d6; text-align: right;">Designer</th>
+   					 <th class="thborder"
+   					 style="border-bottom: 1px solid #d6d6d6; border-top: 1px solid #d6d6d6; text-align: center;" >Specialization</th>
+   					 <th class="thborder"
+   					  style="border-bottom: 1px solid #d6d6d6; border-top: 1px solid #d6d6d6">Phone Number</th>
+ 				 </tr>
+ 				  <tr>
+    				 <td style="text-align: right;">Miranda Li</td>
+   					 <td style="text-align: center;">Minimalistic Design</td>
+   					 <td><a href="tel:331-676-676">331-676-676</a></td>
+  				 </tr>
+  				 <tr>
+   					 <td style="text-align: right;">Lois Swanson</td>
+   					 <td style="text-align: center;">Outdoor/House Decor</td>
+   					 <td><a href="tel:456-231-231">456-321-231</a></td>
+ 				 </tr>
+ 				 <tr>
+    				 <td style="text-align: right;">Joe Brown</td>
+     				 <td style="text-align: center;">Wall/Ceiling Design</td>
+  				     <td><a href="tel:365-098-098">365-098-098</a></td>
+  				 </tr>
+  				 <tr>
+   					 <td style="text-align: right;">Taylor Scotch</td>
+   					 <td style="text-align: center;">Modern Interior Design</td>
+   					 <td><a href="tel:425-606-606">425-606-606</a></td>
+ 			     </tr>
+ 			     <tr>
+   					 <td style="text-align: right;">Cassidy Smith</td>
+   					 <td style="text-align: center;">Traditional Interior Style</td>
+   					 <td><a href="tel:456-098-098">456-098-098</a></td>
+ 				 </tr> 
+ 				 <tr>
+   					 <td style="text-align: right;">Mark Lambert</td>
+   					 <td style="text-align: center;">Home Floor Planning</td>
+   					 <td><a href="tel:985-457-352">985-457-352</a></td>
+ 				 </tr>
+ 				 <tr>
+   					 <td style="text-align: right;">Sofia Gonzalez</td>
+   					 <td style="text-align: center;">Urban Decor</td>
+   					 <td><a href="tel:673-771-312">673-771-312</a></td>
+ 				 </tr>
+ 				 <tr>
+  				   	 <th colspan="3" style="text-align: center; border-bottom: 1px solid #d6d6d6; border-top: 1px solid #d6d6d6;">Management</th>
+ 				 </tr>
+  				 <tr>
+   					 <td style="text-align: right;">Selene Brown</td>
+   					 <td style="text-align: center;">Owner/Degreed Design Specialist</td>
+   					 <td><a href="tel:673-771-312">632-334-634</a></td> 
+   				 </tr>
+  				 <tr>
+   					 <td style="text-align: right;">Rachel Pierce</td>
+   					 <td style="text-align: center;">Co-Owner/Studio Director</td>
+   					 <td><a href="tel:673-771-312">342-701-001</a></td>
+ 				 </tr>	 
+        	  </table>
+        	
+        </div>	
+  	
+  
+  <!--Footer-->
+  <div data-role="footer">
+  	<p>&copy; 2017 Good Interior Design </p>
+  </div>
+  
+ </div>
+</body>
+</html>

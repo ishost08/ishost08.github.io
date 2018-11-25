@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--head section with style sheets and files for mobile menu--> 	
+	<head>
+<!-- Name: Iryna Shostsik
+ 	  Current Date: 04/26/2017 
+	  Class.section: CGS1821.001
+	  Assignment: Final Project
+	  Language: HTML5
+	  Purpose: HTML code for a fictual Interior Design Company "Good Interior Design Firm"
+	  Includes: contacts.css, decor.jpg, normalize.css
+ -->			
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Interior Design Firm: Contacts</title>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/contacts.css">
+	<link rel="stylesheet" href="styles/slicknav.css">
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+		});
+	</script>
+	
+	<style>
+    body, html { height: 100%; }
+
+.parallax {
+    /* The image used */
+    background-image: url('parallax.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+	</head>
+	
+	
+	
+	<body>
+		<header>
+			
+<!--little chair logo uses an image map to navigate to home page from other pages-->
+
+			<div><img src="images/littlechair.png" alt="Little Chair Logo" width="87" height="78" usemap="#chair"></div>
+			<map name="chair">
+            <area href="index.html" alt="Home Page" title="Home Page" shape="circle" coords="43,39,69">
+        </map>
+			<h2>Good Interior Design</h2>
+		</header>
+		
+<!--the navigation menu of the page-->	
+		<nav id="mobile_menu"> </nav>
+		<nav id="nav_menu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="scheduling.html">Scheduling</a></li>
+			<li><a href="contacts.html" class="current">Contacts</a></li>
+		</ul>
+		</nav>	
+		
+		<div class="parallax"></div>
+
+<div>
+<!-- contact list within the table -->			
+		<main>		
+			<img src="images/decor.jpg" alt="Decoration">
+			<p>The ‘Good Interior Design‘ team is filled with creative, dynamic,
+			   and dedicated individuals who are as eclectic as our company. By helping
+			   our clients better understand the process, the experience becomes less intimidating.
+			   We work together to ensure that our clients and customers get the signature
+			   look they want and the quality service they deserve. Each member at our firm
+			   plays an important part in the process. We’d love to meet you personally, to 
+			   discuss your interior design needs and questions, so call us today or stop on
+			   by our showroom.</p>
+			<figure id="table">
+				<figcaption id="caption"> Contact Information </figcaption>
+		<table>
+  <tr>
+    <th class="thborder">Designer</th>
+    <th class="thborder">Specialization</th>
+    <th class="thborder">Phone Number</th>
+  </tr>
+  <tr>
+    <td>Miranda Li</td>
+    <td>Minimalistic Design</td>
+    <td><a href="tel:331-676-676">331-676-676</a></td>
+  </tr>
+  <tr>
+    <td>Lois Swanson</td>
+    <td>Outdoor/House Decor</td>
+    <td><a href="tel:456-231-231">456-321-231</a></td>
+  </tr>
+  <tr>
+    <td>Joe Brown</td>
+    <td>Wall/Ceiling Design</td>
+    <td><a href="tel:365-098-098">365-098-098</a></td>
+  </tr>
+  <tr>
+    <td>Taylor Scotch</td>
+    <td>Modern Interior Design</td>
+    <td><a href="tel:425-606-606">425-606-606</a></td>
+  </tr>
+   <tr>
+    <td>Cassidy Smith</td>
+    <td>Traditional Interior Style</td>
+    <td><a href="tel:456-098-098">456-098-098</a></td>
+  </tr> 
+  <tr>
+    <td>Mark Lambert</td>
+    <td>Home Floor Planning</td>
+    <td><a href="tel:985-457-352">985-457-352</a></td>
+  </tr>
+  <tr>
+    <td>Sofia Gonzalez</td>
+    <td>Urban Decor</td>
+    <td><a href="tel:673-771-312">673-771-312</a></td>
+  </tr>
+  <tr>
+  	<th colspan="3" class="thborder">Management</th>
+  </tr>
+   <tr>
+    <td>Selene Brown</td>
+    <td>Owner/Degreed Design Specialist</td>
+    <td><a href="tel:673-771-312">632-334-634</a></td>
+  </tr>
+   <tr>
+    <td>Rachel Pierce</td>
+    <td>Co-Owner/Studio Director</td>
+    <td><a href="tel:673-771-312">342-701-001</a></td>
+  </tr>
+</table>	
+</figure>
+		<img src="images/decor.jpg" alt="Decoration">
+		</main>
+</div>
+
+<div class="parallax"></div>
+		
+
+
+<!-- the footer of the page -->		
+		<footer>
+		<p>&copy; 2017 Good Interior Design | Contact us at 
+	    intdesign@gmail.com
+	    </p>
+	</footer>
+	</body>
+</html>
+

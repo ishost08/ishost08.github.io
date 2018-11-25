@@ -1,0 +1,259 @@
+/* Name: Iryna Shostsik
+   Current Date: 04/13/2017 
+   Class.section: CGS1821.001
+   Assignment: Project 4
+   Language: СSS3
+   Purpose: CSS code that provides styling for the "Good Interior Design Firm" homepage
+*/
+
+
+/* the styles for the elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	background-color: white;
+}
+body {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	max-width: 1200px;
+    font-size: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* the styles for the header */
+header h2 { 
+	text-align: center; 
+	padding-bottom: 20px;
+	border-bottom: 1px solid #696969;
+	
+}
+header img { 
+	border-bottom: 5px solid #FFD700;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 7px;
+	padding-top: 4px;
+	transition: 3s;
+}
+header img:hover {
+	transform: rotateY(360deg);
+	transform-origin: center;
+}
+div { text-align: center; }
+
+/* the styles for the nav_menu */
+#nav_menu ul {
+	list-style: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+#nav_menu ul li { 
+	width: 20%;
+	float: left; }
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul ul li { float: none; }
+#nav_menu ul li:hover > ul { display: block; }
+#nav_menu > ul::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+#nav_menu ul li a {
+    display: block;
+    line-height: 20px;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: white;
+    color: gray;
+    font-size: 120%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        
+}   
+#nav_menu a.current {
+	color: Black;
+}
+#nav_menu > ul::after {
+	content: "";
+    clear: both;
+    display: block; 
+}
+#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+	color: black;
+}
+
+/* the styles for the section */
+section { 
+	width: 58.3333%;
+	float: left;
+	padding-top: 20px;
+}
+section img:first-child { width: 100%; }
+#img1 { 
+	padding-top: 5px;
+	float: left;
+	width: 44.285714%
+}
+#img2 { 
+	padding-top: 5px;
+	float: right;
+	width: 55%;
+}
+#img3 {
+	width: 100%;
+	padding-top: 5px;
+	height: 212px;
+}
+section a { 
+	float: left;
+	display: block;
+	width: 44.285714%;
+    line-height: 20px;
+    text-align: center;
+    padding: 1em 0;
+    background-color: #D3D3D3;
+    color: #008B8B;
+    font-size: 140%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+section h2 {
+	display: block;
+	float: right;
+	width: 55%;
+    line-height: 20px;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 140%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/*the styles for the aside */
+
+aside { 
+	float: right;
+	width: 39.166666667%;
+	padding-top: 20px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+aside h2 { 
+	background-color: #D3D3D3;
+    color: white;
+    padding: 10px 6.238297% 10px 4.255319%;
+}
+aside img { 
+	padding-top: 5px;
+	height: 285px;
+	width: 100%;
+}
+#p1 { 
+	background-color: #D3D3D3;
+    color: black;
+    padding: 0 30px 20px 20px;
+    font-size: 107%;
+}
+#p2 { 
+	font-size: 120%;
+	text-align: center;
+	padding-bottom: 4px;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+#p3 { 
+	padding: 25px 30px 20px 30px;
+	background-color: #D3D3D3;
+	margin-top: 20px;
+	font-size: 130%;
+	line-height: 20px;
+	text-align: center;
+}
+ol { 
+	margin-left: 30px;
+	font-size: 115%;
+	padding-top: 16px;
+}
+aside a { color: #008B8B; }
+
+/* the styles for the video and its description */
+div h3  { 
+	clear: both;
+	text-align: center;
+	padding: 2em 0 .5em 0;	
+}	
+div p { padding-bottom: 2em; }
+
+embed { 
+	
+	width:100%;
+	max-width: 600px;
+}
+video {
+	max-width: 600px;
+	width: 100%;
+	height: 100%;
+}
+
+/* the styles for the footer */
+footer {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #37515F;
+	font-weight: bold;
+	font-style:oblique;
+	width: 90%;
+	float: left;
+	clear: left; 
+	height: 30px;
+	text-align: left;
+	padding-top: 15px;
+	font-size: 90%;
+}
+
+/* hide the mobile menu initially */
+#mobile_menu { display: none; }
+
+ /*tablet portrait to standart */
+@media only screen and (max-width: 800px) {
+#nav_menu { display: block; }
+#mobile_menu, #img3 { display: none; }
+	body { font-size: 90%; }
+	section h2, #img1 { display: block; }
+}	
+/* mobile landscape to tablet portrait */
+@media only screen and (max-width: 767px) {
+#nav_menu { display: none; }
+#mobile_menu { display: block; }
+body { font-size: 80%; }
+section h2, #img3 { display: none; }
+section a { width: 100%; }
+#img2 { 
+	width: 100%;
+	height: 200px;
+}
+#p1, #img1{ display: none; }
+aside img { height: 200px; }
+#p3 { background-color: white; }
+}
+/* mobile portrait to mobile landscape */
+@media only screen and (max-width: 479px){
+#nav_menu { display: none; }
+#mobile_menu { display: block; }
+body { font-size: 75%; }
+section h2 { display: none; }
+section a { width: 100%; }
+#img2 { width: 100%; }
+aside img , #p1, #p3, #img1, #img3{ display: none; }
+}
+
+
